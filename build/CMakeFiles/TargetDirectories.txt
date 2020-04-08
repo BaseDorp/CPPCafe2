@@ -1,0 +1,3 @@
+/home/sam/Documents/CPP2/CPPCafe2/build/CMakeFiles/rebuild_cache.dir
+/home/sam/Documents/CPP2/CPPCafe2/build/CMakeFiles/Cafe.dir
+/home/sam/Documents/CPP2/CPPCafe2/build/CMakeFiles/edit_cache.dir
