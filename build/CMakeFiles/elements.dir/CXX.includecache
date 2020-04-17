@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sam/Documents/CPP2/CPPCafe2/src/cafe.cpp
+iostream
+-
+vector
+-
+consolecafe.hpp
+/home/sam/Documents/CPP2/CPPCafe2/src/consolecafe.hpp
+
+/home/sam/Documents/CPP2/CPPCafe2/src/consolecafe.cpp
+consolecafe.hpp
+/home/sam/Documents/CPP2/CPPCafe2/src/consolecafe.hpp
+vector
+-
+iostream
+-
+
+/home/sam/Documents/CPP2/CPPCafe2/src/consolecafe.hpp
+cstdlib
+-
+vector
+-
+

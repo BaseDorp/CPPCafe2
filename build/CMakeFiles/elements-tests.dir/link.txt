@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11 -Wall -Wextra -pthread  -rdynamic CMakeFiles/elements-tests.dir/tests.cpp.o CMakeFiles/elements-tests.dir/src/consolecafe.cpp.o  -o elements-tests -lpthread libgtest.a 

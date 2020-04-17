@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11 -Wall -Wextra -pthread  -rdynamic CMakeFiles/elements.dir/src/cafe.cpp.o CMakeFiles/elements.dir/src/consolecafe.cpp.o  -o elements 

@@ -111,44 +111,181 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Cafe
+# Target rules for targets named elements-tests
 
 # Build rule for target.
-Cafe: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Cafe
-.PHONY : Cafe
+elements-tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 elements-tests
+.PHONY : elements-tests
 
 # fast build rule for target.
-Cafe/fast:
-	$(MAKE) -f CMakeFiles/Cafe.dir/build.make CMakeFiles/Cafe.dir/build
-.PHONY : Cafe/fast
+elements-tests/fast:
+	$(MAKE) -f CMakeFiles/elements-tests.dir/build.make CMakeFiles/elements-tests.dir/build
+.PHONY : elements-tests/fast
 
-cafe.o: cafe.cpp.o
+#=============================================================================
+# Target rules for targets named gtest
 
-.PHONY : cafe.o
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) -f CMakeFiles/gtest.dir/build.make CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named elements
+
+# Build rule for target.
+elements: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 elements
+.PHONY : elements
+
+# fast build rule for target.
+elements/fast:
+	$(MAKE) -f CMakeFiles/elements.dir/build.make CMakeFiles/elements.dir/build
+.PHONY : elements/fast
+
+googletest/googletest/src/gtest-all.o: googletest/googletest/src/gtest-all.cc.o
+
+.PHONY : googletest/googletest/src/gtest-all.o
 
 # target to build an object file
-cafe.cpp.o:
-	$(MAKE) -f CMakeFiles/Cafe.dir/build.make CMakeFiles/Cafe.dir/cafe.cpp.o
-.PHONY : cafe.cpp.o
+googletest/googletest/src/gtest-all.cc.o:
+	$(MAKE) -f CMakeFiles/gtest.dir/build.make CMakeFiles/gtest.dir/googletest/googletest/src/gtest-all.cc.o
+.PHONY : googletest/googletest/src/gtest-all.cc.o
 
-cafe.i: cafe.cpp.i
+googletest/googletest/src/gtest-all.i: googletest/googletest/src/gtest-all.cc.i
 
-.PHONY : cafe.i
+.PHONY : googletest/googletest/src/gtest-all.i
 
 # target to preprocess a source file
-cafe.cpp.i:
-	$(MAKE) -f CMakeFiles/Cafe.dir/build.make CMakeFiles/Cafe.dir/cafe.cpp.i
-.PHONY : cafe.cpp.i
+googletest/googletest/src/gtest-all.cc.i:
+	$(MAKE) -f CMakeFiles/gtest.dir/build.make CMakeFiles/gtest.dir/googletest/googletest/src/gtest-all.cc.i
+.PHONY : googletest/googletest/src/gtest-all.cc.i
 
-cafe.s: cafe.cpp.s
+googletest/googletest/src/gtest-all.s: googletest/googletest/src/gtest-all.cc.s
 
-.PHONY : cafe.s
+.PHONY : googletest/googletest/src/gtest-all.s
 
 # target to generate assembly for a file
-cafe.cpp.s:
-	$(MAKE) -f CMakeFiles/Cafe.dir/build.make CMakeFiles/Cafe.dir/cafe.cpp.s
-.PHONY : cafe.cpp.s
+googletest/googletest/src/gtest-all.cc.s:
+	$(MAKE) -f CMakeFiles/gtest.dir/build.make CMakeFiles/gtest.dir/googletest/googletest/src/gtest-all.cc.s
+.PHONY : googletest/googletest/src/gtest-all.cc.s
+
+googletest/googletest/src/gtest_main.o: googletest/googletest/src/gtest_main.cc.o
+
+.PHONY : googletest/googletest/src/gtest_main.o
+
+# target to build an object file
+googletest/googletest/src/gtest_main.cc.o:
+	$(MAKE) -f CMakeFiles/gtest.dir/build.make CMakeFiles/gtest.dir/googletest/googletest/src/gtest_main.cc.o
+.PHONY : googletest/googletest/src/gtest_main.cc.o
+
+googletest/googletest/src/gtest_main.i: googletest/googletest/src/gtest_main.cc.i
+
+.PHONY : googletest/googletest/src/gtest_main.i
+
+# target to preprocess a source file
+googletest/googletest/src/gtest_main.cc.i:
+	$(MAKE) -f CMakeFiles/gtest.dir/build.make CMakeFiles/gtest.dir/googletest/googletest/src/gtest_main.cc.i
+.PHONY : googletest/googletest/src/gtest_main.cc.i
+
+googletest/googletest/src/gtest_main.s: googletest/googletest/src/gtest_main.cc.s
+
+.PHONY : googletest/googletest/src/gtest_main.s
+
+# target to generate assembly for a file
+googletest/googletest/src/gtest_main.cc.s:
+	$(MAKE) -f CMakeFiles/gtest.dir/build.make CMakeFiles/gtest.dir/googletest/googletest/src/gtest_main.cc.s
+.PHONY : googletest/googletest/src/gtest_main.cc.s
+
+src/cafe.o: src/cafe.cpp.o
+
+.PHONY : src/cafe.o
+
+# target to build an object file
+src/cafe.cpp.o:
+	$(MAKE) -f CMakeFiles/elements.dir/build.make CMakeFiles/elements.dir/src/cafe.cpp.o
+.PHONY : src/cafe.cpp.o
+
+src/cafe.i: src/cafe.cpp.i
+
+.PHONY : src/cafe.i
+
+# target to preprocess a source file
+src/cafe.cpp.i:
+	$(MAKE) -f CMakeFiles/elements.dir/build.make CMakeFiles/elements.dir/src/cafe.cpp.i
+.PHONY : src/cafe.cpp.i
+
+src/cafe.s: src/cafe.cpp.s
+
+.PHONY : src/cafe.s
+
+# target to generate assembly for a file
+src/cafe.cpp.s:
+	$(MAKE) -f CMakeFiles/elements.dir/build.make CMakeFiles/elements.dir/src/cafe.cpp.s
+.PHONY : src/cafe.cpp.s
+
+src/consolecafe.o: src/consolecafe.cpp.o
+
+.PHONY : src/consolecafe.o
+
+# target to build an object file
+src/consolecafe.cpp.o:
+	$(MAKE) -f CMakeFiles/elements-tests.dir/build.make CMakeFiles/elements-tests.dir/src/consolecafe.cpp.o
+	$(MAKE) -f CMakeFiles/elements.dir/build.make CMakeFiles/elements.dir/src/consolecafe.cpp.o
+.PHONY : src/consolecafe.cpp.o
+
+src/consolecafe.i: src/consolecafe.cpp.i
+
+.PHONY : src/consolecafe.i
+
+# target to preprocess a source file
+src/consolecafe.cpp.i:
+	$(MAKE) -f CMakeFiles/elements-tests.dir/build.make CMakeFiles/elements-tests.dir/src/consolecafe.cpp.i
+	$(MAKE) -f CMakeFiles/elements.dir/build.make CMakeFiles/elements.dir/src/consolecafe.cpp.i
+.PHONY : src/consolecafe.cpp.i
+
+src/consolecafe.s: src/consolecafe.cpp.s
+
+.PHONY : src/consolecafe.s
+
+# target to generate assembly for a file
+src/consolecafe.cpp.s:
+	$(MAKE) -f CMakeFiles/elements-tests.dir/build.make CMakeFiles/elements-tests.dir/src/consolecafe.cpp.s
+	$(MAKE) -f CMakeFiles/elements.dir/build.make CMakeFiles/elements.dir/src/consolecafe.cpp.s
+.PHONY : src/consolecafe.cpp.s
+
+tests.o: tests.cpp.o
+
+.PHONY : tests.o
+
+# target to build an object file
+tests.cpp.o:
+	$(MAKE) -f CMakeFiles/elements-tests.dir/build.make CMakeFiles/elements-tests.dir/tests.cpp.o
+.PHONY : tests.cpp.o
+
+tests.i: tests.cpp.i
+
+.PHONY : tests.i
+
+# target to preprocess a source file
+tests.cpp.i:
+	$(MAKE) -f CMakeFiles/elements-tests.dir/build.make CMakeFiles/elements-tests.dir/tests.cpp.i
+.PHONY : tests.cpp.i
+
+tests.s: tests.cpp.s
+
+.PHONY : tests.s
+
+# target to generate assembly for a file
+tests.cpp.s:
+	$(MAKE) -f CMakeFiles/elements-tests.dir/build.make CMakeFiles/elements-tests.dir/tests.cpp.s
+.PHONY : tests.cpp.s
 
 # Help Target
 help:
@@ -157,11 +294,25 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... Cafe"
 	@echo "... edit_cache"
-	@echo "... cafe.o"
-	@echo "... cafe.i"
-	@echo "... cafe.s"
+	@echo "... elements-tests"
+	@echo "... gtest"
+	@echo "... elements"
+	@echo "... googletest/googletest/src/gtest-all.o"
+	@echo "... googletest/googletest/src/gtest-all.i"
+	@echo "... googletest/googletest/src/gtest-all.s"
+	@echo "... googletest/googletest/src/gtest_main.o"
+	@echo "... googletest/googletest/src/gtest_main.i"
+	@echo "... googletest/googletest/src/gtest_main.s"
+	@echo "... src/cafe.o"
+	@echo "... src/cafe.i"
+	@echo "... src/cafe.s"
+	@echo "... src/consolecafe.o"
+	@echo "... src/consolecafe.i"
+	@echo "... src/consolecafe.s"
+	@echo "... tests.o"
+	@echo "... tests.i"
+	@echo "... tests.s"
 .PHONY : help
 
 

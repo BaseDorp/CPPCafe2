@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include "consolecafe.hpp"
 
 float GetTotal(std::vector<float> _cart);
 std::vector<int> Pay(float total, int pay);
@@ -9,7 +10,7 @@ int main()
 {
 	std::cout << "What would you like to buy" << std::endl;
 
-	bool isBuying = false;
+	bool isBuying = true;
 	int itemNum = 0;
 
 	// Prices of items in the Cafe
@@ -64,8 +65,11 @@ int main()
 					std::cout << "How much would you like to pay (Only whole numbers)" << std::endl;
     				std::cin >> balance;
     				// TODO make sure the pay is a whole number
-    				std::cout << balance;
 					Pay(GetTotal(Cart), balance);
+
+					// print out how many bills the user gets back
+					std::vector<std::string> billsName = { "hundreds", "twenties", "tens", "fives", "dollars", "quarters", "dimes", "nickles", "pennies"};
+
 
 					isBuying = false;
 				}
@@ -75,54 +79,4 @@ int main()
 
 	std::cout << "\nThank you, come again!" << std::endl;
 	return 0;
-}
-
-float GetTotal(std::vector<float> _cart)
-{
-	// Declaring the iterator
-	std::vector<float>::iterator ptr;
-	float total = 0;
-
-	for (ptr = _cart.begin(); ptr < _cart.end(); ptr++)
-	{
-		total += *ptr;
-	}
-
-	return total;
-}
-
-std::vector<int> Pay(float total, int pay)
-{
-	// Gets how much the user is owed back
-	float change = pay - total;
-
-	// Removes the decimal
-	total = total * 10;
-	change = change * 10;
-	
-	
-	// All money values x10 so there is no decimal
-    std::vector<int> bills = { 10000, 2000, 1000, 500, 100, 25, 10, 5, 1 };
-	// extra element for return pay
-	std::vector<int> returnBills = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-	// 
-	std::vector<std::string> billsName = { "hundred", "twenty", "ten", "five", "dollar", "quarter", "dime", "nickle", "penny"};
-
-	// Goes through the vector for each bill
-	for (int i = 0; i < bills.size(); i++)
-	{
-		// Only does math is the change is greater than the current bill
-		if (change > bills[i])
-		{
-			// counts how many bills of that type is needed
-			returnBills[i] = (int)change % bills[i];
-			std::cout << returnBills[i/10];
-		}
-	}
-
-	return returnBills;
-    
-    // customer can only pay in 1,5,10,20
-    // change must be least number of bills and coins possible
-    // must have 3 unit tests
 }
